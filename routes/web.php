@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('home', [
+        "nama_produk" => "Face Comp K44 Beat K25 K81 , SCOOPY VARIO",
+        "category" => "Mesin",
+        "detail_product" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, error.",
+        "harga" => "Rp. 67.000"
+    ]);
+});
+
+Route::get('/welcome', function () {
     return view('welcome');
+
 });
