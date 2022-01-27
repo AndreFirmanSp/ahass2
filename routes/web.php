@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ListSparepart;
+use App\Http\Controllers\ListSparepartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +28,23 @@ Route::get('/welcome', function () {
     return view('welcome');
 
 });
+
+Route::get('/list_sparepart', function () {
+    return view('list_sparepart', [
+        "nama_produk" => "Face Comp K44 Beat K25 K81 , SCOOPY VARIO",
+        "category" => "Mesin",
+        "detail_product" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, error.",
+        "harga" => "Rp. 67.000"
+    ],
+    [
+        "nama_produk" => "Face Comp K44 Beat K25 K81 , SCOOPY VARIO",
+        "category" => "Mesin",
+        "detail_product" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, error.",
+        "harga" => "Rp. 67.000"
+    ]
+
+);
+
+});
+
+// Route::resource('list_spareparts', ListSparepartController::class);

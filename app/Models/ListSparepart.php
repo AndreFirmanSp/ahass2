@@ -5,11 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ListSparepart
+class ListSparepart extends Model
 {
-    static $listsparepart = [
-        [
-            
-        ]
+    use HasFactory;
+
+    protected $fillable = [
+        'kd_part',
+        'nama_part',
+        'desc',
+        'harga',
+        'jumlah',
     ];
+
 }
